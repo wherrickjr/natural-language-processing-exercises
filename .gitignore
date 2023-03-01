@@ -4,3 +4,4 @@ env.py
 __pycache__
 *.csv
 web_scraping.ipynb
+prepare_workbook.ipynb

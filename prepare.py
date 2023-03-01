@@ -27,28 +27,28 @@ def tokenize(string):
     function tokenizes text
     '''
     tokenizer = nltk.tokenize.ToktokTokenizer()
-    return tokenizer.tokenize(content, return_str = True)
+    return tokenizer.tokenize(string, return_str = True)
 
 # exercise 3
 def stem(string):
     '''
     stemms string
     '''
+    ps = nltk.porter.PorterStemmer()
     stems = [ps.stem(word) for word in string.split()]
     article_stemmed = ' '.join(stems)
     return article_stemmed
 
 
-    # exercise 4
-    def lemmatize(stem):
-        '''
-        lemmatizes string
-        '''
-        wnl = nltk.stem.WordNetLemmatizer()
-
-        lemmas = [wnl.lemmatize(word) for word in content.split()]
-        article_lemmatized = ' '.join(lemmas)
-        return article_lemmatized
+# exercise 4
+def lemmatize(string):
+    '''
+    lemmatizes string
+    '''
+    wnl = nltk.stem.WordNetLemmatizer()
+    lemmas = [wnl.lemmatize(word) for word in string.split()]
+    article_lemmatized = ' '.join(lemmas)
+    return article_lemmatized
 
 # exercise 5
 def remove_stopwords(string):
@@ -58,5 +58,13 @@ def remove_stopwords(string):
     article_without_stopwords = ' '.join(filtered_words)
 
     return article_without_stopwords
-    
-#exercise 6
+
+
+'''
+exercise 9
+
+a. lemmatize because it is a small dataset
+b. stemming or lematizing because it is in between a large and small corpus
+c. stemming because it is a large dataset and it is quicker
+
+'''

@@ -5,3 +5,4 @@ __pycache__
 *.csv
 web_scraping.ipynb
 prepare_workbook.ipynb
+nlp_modeling_lesson.ipynb
